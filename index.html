@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="style.css" />
+
+<title>🧩 The Letter Puzzle</title>
+
+</head>
+
+<body>
+
+<div class="background">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="blob blob4"></div>
+</div>
+
+<div class="paper">
+
+    <div class="title">
+        <h1 id="titleText">🧩 THE LETTER PUZZLE</h1>
+    </div>
+
+    <!-- COMPLETE HINT GAME (UNCHANGED STRUCTURE, FULL CONTENT) -->
+    <div class="puzzle" id="puzzleBox">
+
+        <p><b>Clue 1:</b> “I am a message without a home, until I arrive at my final reader. To find me, first look where letters gain their true identity.”</p>
+        <p>👉 (Hint: Think alphabet position A=1, B=2…)</p>
+
+        <p><b>Clue 2:</b> “Good. Now find what connects these numbers: 5, 5, 8, 12, 12”</p>
+        <p>👉 (Hint: These are differences from something larger.)</p>
+
+        <p><b>Clue 3:</b> “Each number hides a subtraction from a secret key. The key is the same for all.”</p>
+        <p>👉 (Hint: Try subtracting from 16, 10, 28, 17, 30… but reverse thinking is needed.)</p>
+
+        <p><b>Clue 4:</b> “Stop subtracting. Instead, match them to A1Z26: 16 | 5 | 20 | 5 | 18”</p>
+
+        <input type="password" id="password" placeholder="enter final answer...">
+        <button onclick="unlock()">Unlock Letter ✿</button>
+
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="message" id="message">
+
+        <h2>To Peter,</h2>
+        <div id="typedText"></div>
+
+        <div id="signature">
+        — from someone who is trying their best, Dorothy 😊
+        </div>
+
+        <span class="cursor"></span>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

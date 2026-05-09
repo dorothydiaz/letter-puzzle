@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family:'Poppins',sans-serif;
+    background:#fffafc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* BACKGROUND */
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+}
+
+.background::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 34px,
+        rgba(255,182,193,0.18) 35px
+    );
+}
+
+.background::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size:18px 18px;
+}
+
+/* blobs */
+.blob{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(60px);
+    opacity:0.5;
+}
+
+.blob1{width:240px;height:240px;background:#ffd7eb;top:-60px;left:-60px;}
+.blob2{width:260px;height:260px;background:#d7c7ff;bottom:-90px;right:-80px;}
+.blob3{width:200px;height:200px;background:#fff0a8;top:40%;left:45%;}
+.blob4{width:180px;height:180px;background:#ccecff;bottom:10%;left:10%;}
+
+/* PAPER UNFOLD */
+.paper{
+    width:100%;
+    max-width:850px;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(10px);
+    border-radius:28px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+
+    transform:scaleY(0);
+    transform-origin:top;
+    animation:unfold 0.9s ease forwards;
+}
+
+@keyframes unfold{
+    to{transform:scaleY(1);}
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.title h1{
+    font-family:'Handlee',cursive;
+    font-size:38px;
+    color:#b57cb4;
+}
+
+/* PUZZLE BOX */
+.puzzle{
+    background:#fffafd;
+    border:2px dashed #f1c9d8;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.puzzle p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:10px;
+}
+
+/* INPUT */
+input{
+    width:100%;
+    padding:14px;
+    border-radius:16px;
+    border:2px dashed #f3cfe1;
+    text-align:center;
+    outline:none;
+    margin-bottom:12px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:16px;
+    cursor:pointer;
+    font-size:15px;
+    background:linear-gradient(135deg,#ffd3e8,#d7c7ff,#fff0a8,#ccecff);
+    color:#5e5e5e;
+}
+
+/* MESSAGE */
+.message{
+    display:none;
+    padding-top:10px;
+}
+
+.message h2{
+    font-family:'Handlee',cursive;
+    font-size:32px;
+    color:#b57cb4;
+    margin-bottom:10px;
+}
+
+/* typing */
+#typedText{
+    white-space:pre-wrap;
+    line-height:2;
+    color:#5f5a5f;
+}
+
+.cursor{
+    display:inline-block;
+    width:10px;
+    background:#b57cb4;
+    animation:blink 0.7s infinite;
+}
+
+#signature{
+    margin-top:25px;
+    opacity:0;
+    transform:translateY(10px);
+
+    text-align:right;              /* 👉 RIGHT SIDE */
+    color:#b57cb4;                 /* 👉 soft purple */
+    font-family:'Handlee', cursive;
+    font-size:18px;
+
+    transition:all 1.4s ease;
+}
+
+@keyframes blink{50%{opacity:0;}}
+
+/* responsive */
+@media(max-width:600px){
+    .paper{padding:20px;}
+    .title h1{font-size:28px;}
+}
+
+/* shake */
+.shake{
+    animation:shake .3s;
+}
+
+@keyframes shake{
+    0%,100%{transform:translateX(0);}
+    25%{transform:translateX(-4px);}
+    50%{transform:translateX(4px);}
+    75%{transform:translateX(-4px);}
+}
