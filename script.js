@@ -1,4 +1,4 @@
-const fullMessage = `Anyways, Peter, don’t feel pressured, okay? I know you don’t like me, and I’m not asking you to. I also know na hindi mo pa ako ganun kakilala because you met me during a lost and messy phase of my life.
+const fullMessage = `Hi Peter, don’t feel pressured, okay? I know you don’t like me, and I’m not asking you to. I also know na hindi mo pa ako ganun kakilala because you met me during a lost and messy phase of my life.
 
 Honestly, I’m disappointed in myself kasi maling version ko yung naipakita ko sa’yo. I know I’m strong, independent, and capable — someone who can stand beside you toe-to-toe, but also stand on my own.
 
